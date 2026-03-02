@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Timer - Hard</title>
+  
+</head>
+
+<body>
+    
+  <div class="app">
+
+        <div class="title-bar">
+  <span class="app-title">Egg timer &lt;3</span>
+  <div class="window-controls">
+    <button id="min-btn">_</button>
+    <button id="close-btn">X</button>
+  </div>
+</div>
+  <div class="content">
+    <h1>Hard Egg Timer</h1>
+    <div id="timer">07:00</div>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="snoozeTimer()">Snooze (30 sec)</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="backToMenu()">Back to Main Menu</button>
+
+    <script src="script.js"></script>
+    <script>
+        const TIMER_DURATION = 420; // 7 minutes
+        initializeTimer(TIMER_DURATION);
+    </script>
+
+<script>
+  
+
+  document.getElementById("min-btn").onclick = () => {
+    currentWindow.minimize();
+  };
+
+  document.getElementById("close-btn").onclick = () => {
+    currentWindow.close();
+  };
+  const { ipcRenderer } = require('electron');
+
+  document.getElementById("min-btn").addEventListener("click", () => {
+    ipcRenderer.send("minimize-window");
+  });
+
+  document.getElementById("close-btn").addEventListener("click", () => {
+    ipcRenderer.send("close-window");
+  });
+</script>
+ </body>
+</html>

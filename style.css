@@ -1,0 +1,143 @@
+/* ========================= */
+/* Base Layout */
+/* ========================= */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* ========================= */
+/* App Card */
+/* ========================= */
+
+.app {
+  width: 450px;
+  height: 650px;
+  background-color: #c76ad7;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ========================= */
+/* Title Bar */
+/* ========================= */
+
+.title-bar {
+  height: 45px;
+  background-color: #c76ad7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  font-weight: bold;
+  color: white;
+  -webkit-app-region: drag; /* allows dragging */
+}
+
+.window-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.window-controls button {
+  width: 28px;
+  height: 24px;
+  border: 2px solid black;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-app-region: no-drag; /* clickable */
+}
+
+.window-controls button:hover {
+  background-color: hotpink;
+  color: white;
+}
+
+/* ========================= */
+/* Content Area */
+/* ========================= */
+
+.content {
+  flex: 1;
+  background-image: url("sky.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  margin: 10px;   /* THIS creates the inner gap */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+/* ========================= */
+/* Headings */
+/* ========================= */
+
+.content h1{
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+.content h2 {
+  color: black;
+  margin-bottom: 20px;
+.app-title {
+  image-rendering: pixelated;
+  letter-spacing: 1px;
+}
+}
+
+/* ========================= */
+/* Buttons */
+/* ========================= */
+
+.content button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: 2px solid black;
+  background-color: hotpink;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.content button:hover {
+  transform: scale(1.08);
+}
+
+.content button:active {
+  transform: scale(0.95);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 8px;
+}
+
+
+/* ========================= */
+/* Timer Display */
+/* ========================= */
+
+.timer-display {
+  font-size: 60px;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+/* Timer button group */
+.buttons button {
+  margin: 10px;
+}
+body {
+  font-family: 'Press Start 2P', cursive;
+}

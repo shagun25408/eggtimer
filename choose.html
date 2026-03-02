@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Egg Type</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <div class="title-bar">
+      <span class="app-title">Egg timer &lt;3</span>
+      <div class="window-controls">
+        <button id="min-btn">_</button>
+        <button id="close-btn">X</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <h3>Choose Your Egg Type</h3>
+
+      <button onclick="window.location.href='soft.html'">Soft (3 min)</button>
+      <button onclick="window.location.href='medium.html'">Medium (5 min)</button>
+      <button onclick="window.location.href='hard.html'">Hard (7 min)</button>
+      <button onclick="window.location.href='extrahard.html'">Extra Hard (10 min)</button>
+    </div>
+
+  </div>
+
+  <script>
+    
+
+    document.getElementById("min-btn").onclick = () => {
+      currentWindow.minimize();
+    };
+
+    document.getElementById("close-btn").onclick = () => {
+      currentWindow.close();
+    };
+    const { ipcRenderer } = require('electron');
+
+  document.getElementById("min-btn").addEventListener("click", () => {
+    ipcRenderer.send("minimize-window");
+  });
+
+  document.getElementById("close-btn").addEventListener("click", () => {
+    ipcRenderer.send("close-window");
+  });
+  </script>
+
+</body>
+</html>

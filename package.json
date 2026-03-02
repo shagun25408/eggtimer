@@ -1,0 +1,24 @@
+{
+  "name": "egg-timer",
+  "version": "1.0.0",
+  "description": "made all the html pages\r made javascript file \r started the css file",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shagun25408/eggtimer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shagun25408/eggtimer/issues"
+  },
+  "homepage": "https://github.com/shagun25408/eggtimer#readme",
+  "devDependencies": {
+    "electron": "^40.6.0"
+  },
+  "keywords": [],
+  "type": "commonjs"
+}
